@@ -5,6 +5,8 @@
  */
 package servidor;
 
+import utils.Productos;
+import utils.Usuario;
 import javax.swing.JButton;
 import javax.swing.JList;
 import javax.swing.JPasswordField;

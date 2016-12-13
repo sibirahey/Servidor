@@ -5,6 +5,9 @@
  */
 package servidor;
 
+import utils.Constantes;
+import utils.Productos;
+import utils.Usuario;
 import javax.swing.DefaultListModel;
 
 /**
@@ -13,27 +16,27 @@ import javax.swing.DefaultListModel;
  */
 public class Modelo {
 
-    private DefaultListModel listUsuarios;
-    private DefaultListModel listProductos;
+    private DefaultListModel<Usuario> listUsuarios;
+    private DefaultListModel<Productos> listProductos;
 
     public Modelo() {
         listUsuarios = ArchivoUtil.leerArchivoUsuarios(Constantes.ARCHIVO_USUARIOS, Constantes.REGEX_USUARIOS, Usuario.class);
         listProductos = ArchivoUtil.leerArchivoUsuarios(Constantes.ARCHIVO_PRODUCTOS, Constantes.REGEX_USUARIOS, Productos.class);
     }
 
-    public DefaultListModel getListUsuarios() {
+    public DefaultListModel<Usuario> getListUsuarios() {
         return listUsuarios;
     }
 
-    public void setListUsuarios(DefaultListModel listUsuarios) {
+    public void setListUsuarios(DefaultListModel<Usuario> listUsuarios) {
         this.listUsuarios = listUsuarios;
     }
 
-    public DefaultListModel getListProductos() {
+    public DefaultListModel<Productos> getListProductos() {
         return listProductos;
     }
 
-    public void setListProductos(DefaultListModel listProductos) {
+    public void setListProductos(DefaultListModel<Productos> listProductos) {
         this.listProductos = listProductos;
     }
 

@@ -1,5 +1,2 @@
-Television$100
-Radio$50
-iPhone$25
-Tablet$60
-Laptop$350
+tv::5000
+radio::4000

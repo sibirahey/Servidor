@@ -5,10 +5,13 @@
  */
 package servidor;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,6 +19,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 import javax.swing.DefaultListModel;
+import utils.Compra;
+import utils.Productos;
+import utils.ToFile;
 
 /**
  *
@@ -51,6 +57,24 @@ public class ArchivoUtil {
         } catch (IOException ex) {
             Logger.getLogger(Servidor.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public static boolean guardarCompra(String fileCompra ,Compra compra) {
+        
+        try {
+            
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(fileCompra),StandardOpenOption.APPEND);
+            LocalDateTime ahora = LocalDateTime.now(); 
+            writer.write(String.format("Usuario:%s\tTotal:%s\tFecha:%s\n", compra.getUsuario(),compra.getTotal(),ahora));
+            for (Productos productos : compra.getProductos()) {
+                writer.write(String.format("\t%s\t%s\n", productos.getNombre(),productos.getPrecio()));
+            }
+            writer.close();
+            return true;
+        } catch (IOException ex) {
+            Logger.getLogger(Servidor.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
 
     public static Object agregarObjeto(String line,String regex,Class<?> aClass) {

@@ -1,0 +1,25 @@
+Usuario:prueba	Total:4000	Fecha:2016-12-13T01:48:04.808
+	radio	4000
+Usuario:diana	Total:5000	Fecha:2016-12-13T02:01:14.470
+	tv	5000
+Usuario:diana	Total:9000	Fecha:2016-12-13T02:01:28.484
+	tv	5000
+	radio	4000
+Usuario:manolin	Total:9000	Fecha:2016-12-13T02:02:42.716
+	tv	5000
+	radio	4000
+Usuario:lalo	Total:9056	Fecha:2016-12-13T02:03:22.359
+	tv	5000
+	radio	4000
+	uno mas	56
+Usuario:lalo	Total:37404	Fecha:2016-12-13T02:05:43.175
+	galletas	15
+	helado	40
+	gansitos	50
+	laptop	5000
+	netflix	299
+	piano	4000
+	tablet	6000
+	celular	3000
+	reloj	10000
+	pantalla	9000
