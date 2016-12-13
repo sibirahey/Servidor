@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import utils.Constantes;
 
 /**
  *
@@ -52,7 +53,7 @@ class ThreadServer extends Thread {
     private String processInput(String inputLine) {
         String respuesta = null;
         switch(inputLine){
-            case "autenticar":
+            case Constantes.AUTENTICAR:
                 procesarAutenticar();
                 break;
             case "productos":
