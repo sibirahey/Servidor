@@ -18,7 +18,7 @@ public class Modelo {
 
     public Modelo() {
         listUsuarios = ArchivoUtil.leerArchivoUsuarios(Constantes.ARCHIVO_USUARIOS, Constantes.REGEX_USUARIOS, Usuario.class);
-        listProductos = ArchivoUtil.leerArchivoUsuarios(Constantes.ARCHIVO_PRODUCTOS, Constantes.REGEX_PRODUCTOS, Productos.class);
+        listProductos = ArchivoUtil.leerArchivoUsuarios(Constantes.ARCHIVO_PRODUCTOS, Constantes.REGEX_USUARIOS, Productos.class);
     }
 
     public DefaultListModel getListUsuarios() {

@@ -12,11 +12,11 @@ package servidor;
 public class Productos implements ToFile {
 
     private String nombre;
-    private int contraseña;
+    private int precio;
 
     public Productos(String nombre, String contraseña) {
         this.nombre = nombre;
-        this.contraseña = Integer.parseInt(contraseña);
+        this.precio = Integer.parseInt(contraseña);
     }
 
     public String getNombre() {
@@ -27,22 +27,22 @@ public class Productos implements ToFile {
         this.nombre = nombre;
     }
 
-    public int getContraseña() {
-        return contraseña;
+    public int getPrecio() {
+        return precio;
     }
 
-    public void setContraseña(int contraseña) {
-        this.contraseña = contraseña;
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     @Override
     public String toString() {
-        return nombre;
+        return String.format("%s\t\t\t$%s", nombre, precio);
     }
 
     @Override
     public String toFile() {
-        return String.format("%s%s%s", nombre,Constantes.REGEX_PRODUCTOS, contraseña);
+        return String.format("%s%s%s", nombre, Constantes.REGEX_USUARIOS, precio);
     }
 
 }
