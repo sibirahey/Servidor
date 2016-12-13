@@ -26,6 +26,7 @@ public class Controlador {
     }
 
     void mostrarPantalla() {
+        pantalla.setLocationRelativeTo(null);
         pantalla.setVisible(true);
     }
 
